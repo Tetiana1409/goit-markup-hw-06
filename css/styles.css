@@ -234,10 +234,10 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--primary-white-color);
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -252,8 +252,6 @@ img {
   color: var(--primary-white-color);
   background-color: var(--hero-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 0;
 }
 
 /* ---------------------INDEX-ADVANCES--------------------- */
@@ -749,12 +747,12 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(360deg);
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .modal-button {
@@ -770,9 +768,11 @@ img {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button:hover {
+.modal-button:hover,
+.modal-button:focus {
   fill: var(--accent-color);
 }
 
@@ -786,10 +786,13 @@ img {
   color: var(--primary-tittle-color);
 }
 
+.modal-field {
+  margin-bottom: 10px;
+}
+
 .input-wrap {
   position: relative;
   display: block;
-  margin-bottom: 10px;
 }
 
 .modal-input {
@@ -801,6 +804,7 @@ img {
   border-radius: 4px;
   font-size: 16px;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus,
@@ -817,14 +821,12 @@ img {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-label .input-label-text {
+.input-label {
   display: block;
   margin-bottom: 4px;
-}
-
-.input-label-text {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -846,4 +848,61 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-agreement {
+  appearance: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.checkbox-input {
+  padding-left: 54px;
+  padding-right: 7px;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.checkbox-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.button-form {
+  font-family: inherit;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 52px;
+  min-width: 200px;
+  height: 50px;
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-form:hover,
+.button-form:focus {
+  color: var(--primary-white-color);
+  background-color: var(--hero-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
