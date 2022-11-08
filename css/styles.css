@@ -604,7 +604,7 @@ img {
 }
 
 .footer-send {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .footer-title-send {
@@ -647,7 +647,6 @@ img {
 .footer-button {
   font-family: inherit;
   position: relative;
-  display: block;
   padding: 10px 28px;
   min-width: 200px;
   height: 50px;
@@ -655,7 +654,7 @@ img {
   border-radius: 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -665,11 +664,15 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.footer-button-icon {
+.footer-button::after {
+  content: " ";
   position: absolute;
-  top: 10px;
-  left: 148px;
+  display: inline-block;
+  top: 13px;
   right: 28px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/send.svg);
 }
 
 /* -------------------PORTFOLIO-BUTTON------------------ */
@@ -925,11 +928,6 @@ img {
   margin-bottom: 30px;
 }
 
-/* .checkbox-input {
-  padding-left: 54px;
-  padding-right: 7px;
-} */
-
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -945,6 +943,7 @@ img {
   border: 2px solid var(--primary-tittle-color);
   border-radius: 3px;
   margin-right: 7px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
